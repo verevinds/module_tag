@@ -6,7 +6,7 @@
   },
   "name": "select",
   "version": "1.0.0",
-  "description": "Module <select></select>",
+  "description": "💾 Module that allows you to create an instance of a class for drawing the html tag on the page",
   "main": "index.html",
   "directories": {
     "lib": "lib"
@@ -14,7 +14,7 @@
   "dependencies": {},
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build src/select.ts"
+    "select": "parcel build src/select/index.ts"
   },
   "author": "Verevin S. Denis <verevinds@yandex.ru>",
   "license": "ISC"
