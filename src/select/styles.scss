@@ -15,6 +15,7 @@ $border: #ccc;
 $shadow: rgba(0, 0, 0, 0.3);
 $hoverColor: #eee;
 $active: rgb(207, 212, 185);
+$transition: 0.8s ease-in-out;
 
 .wrap {
   width: $width;
@@ -27,10 +28,13 @@ $active: rgb(207, 212, 185);
 
   &.open {
     .select__dropdown {
-      display: block;
+      visibility: visible;
+      opacity: 1;
+      height: $height * 4;
 
       border-top-left-radius: 0px;
       border-top-right-radius: 0px;
+      transition: $transition;
     }
 
     .select__input {
@@ -40,6 +44,16 @@ $active: rgb(207, 212, 185);
     }
     .select__backdrop {
       display: block;
+    }
+  }
+
+  &.close {
+    .select__dropdown {
+      height: 0;
+      visibility: none;
+      opacity: 0;
+      border-radius: $width * 0.01;
+      transition: $transition;
     }
   }
 
@@ -56,10 +70,8 @@ $active: rgb(207, 212, 185);
   }
 
   &__dropdown {
-    display: none;
     position: absolute;
     border: 1px solid $border;
-    border-radius: $width * 0.01;
     top: $height;
     left: 0;
     right: 0;
