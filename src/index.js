@@ -1,5 +1,7 @@
-import { Li, Ul, Select, FontAwesome } from './selectKit/index.ts';
 // import { Select } from './select/index';
+import { Select } from './Select/Select';
+import { Ul, Li } from './Ul/Ul';
+import './index.scss';
 
 const select = new Select('#select', {
   placeholder: 'Выберите фреймворк',
@@ -33,5 +35,5 @@ const ul = new Ul();
 //     { id: 4, value: ul.Item(3, `Angular`) },
 //   ]),
 // );
-console.log(FontAwesome('fa-arrow-down'));
+
 window.ul = ul;

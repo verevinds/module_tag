@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+$active: rgb(207, 212, 185);
+$border: #ccc;
+$height: 46px;
+$hoverColor: #eee;
+$shadow: rgba(0, 0, 0, .3);
+$transition: .6s ease-in-out;
+$width: 500px;
 
 * {
   font-family: 'Roboto', sans-serif;
 }
-
-$height: 46px;
-$width: 500px;
-$border: #ccc;
-$shadow: rgba(0, 0, 0, .3);
-$hoverColor: #eee;
-$active: rgb(207, 212, 185);
-$transition: .6s ease-in-out;
 
 .list {
   font-size: 1rem;
@@ -64,7 +63,7 @@ $transition: .6s ease-in-out;
     .select__dropdown {
       visibility: visible;
 
-      height: $height * 4;
+      height: ($height) * 4;
 
       opacity: 1;
       border-top-left-radius: 0;
